@@ -1,2 +1,55 @@
 # Ocean-Meets-Forest
-Forecasting port traffic at the intersection of maritime data and machine learning – where the ocean meets the forest.
+# 海洋與森林的交會 🌊🌳  
+結合隨機森林與 SHAP 解釋之港口艘次預測系統
+
+> 以2020–2025年台中港為例，預測艘次變化趨勢，結合AI與海事領域專業的創新應用。
+
+---
+
+## 📘 專案簡介
+
+本專案以台中港艘次資料為基礎，建構一套結合隨機森林回歸與 SHAP 模型解釋技術的艘次預測系統。資料時間涵蓋疫情前中後（2020/05–2025/04），資料取自交通部 iMarine 資料庫。本研究為台灣首次將 SHAP 導入艘次預測，揭示「航線組合數」與「船舶種類」等結構性關鍵特徵。
+
+本系統可作為：
+- 艘次預測決策支援
+- 港務異常偵測與調度建議依據
+- 智慧港口 AI 實證應用展示
+
+---
+
+## 🧠 模型與技術
+
+| 項目 | 技術 | 備註 |
+|------|------|------|
+| 演算法 | Random Forest Regressor | 使用 Scikit-learn 實作 |
+| 模型解釋 | SHAP (TreeExplainer) | 探討特徵貢獻與交互作用 |
+| 視覺化 | matplotlib / seaborn / shap.plots | 含 SHAP Summary Plot, Dependence Plot, Heatmap |
+
+---
+
+## 📈 模型成效
+
+| 指標 | 值 |
+|------|----|
+| MSE | 208.66 |
+| MAE | 6.44 |
+| RMSE | 14.45 |
+| R² | **0.9605** |
+
+> 模型預測準確度極高，具備實務落地潛力。
+
+---
+
+## 🔍 特徵貢獻與洞察（SHAP 分析）
+
+### 最關鍵特徵：
+- `航線組合數`：與艘次呈強正相關
+- `船舶種類`：如全貨櫃船顯著影響艘次
+- `年月`：反映疫情與季節性波動
+
+### 可解釋分析成果：
+- SHAP Summary Plot 展示整體特徵貢獻排名
+- SHAP Dependence Plot 揭示特徵交互效果（如年與航線組合數）
+- SHAP 熱力圖揭露船種與時間交集變化趨勢
+
+---
