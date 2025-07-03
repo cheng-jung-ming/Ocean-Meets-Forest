@@ -1,0 +1,9 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+git commit -m "Add streamlit config to fix permission error"
+git push
+
+
