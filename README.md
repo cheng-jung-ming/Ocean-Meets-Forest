@@ -75,3 +75,6 @@
 - 📊 提供結構性視覺洞察，協助未來港口營運策略規劃與調度分析
 ![SHAP Dependence plot](images/SHAP-Dependence-plot.png)
 ---
+
+## 🔗 模型部署
+https://huggingface.co/spaces/jung-ming/Ocean-Meets-Forest
